@@ -1,0 +1,47 @@
+2026-02-25 10:48:54,372 - INFO - === 数据清洗开始 === 输入: data/test_data.csv, 输出: output/cleaned_data.csv
+2026-02-25 10:48:54,383 - ERROR - 读取文件失败: [Errno 2] No such file or directory: 'data/test_data.csv'
+2026-02-25 10:48:54,384 - ERROR - 处理过程中发生未预期错误: [Errno 2] No such file or directory: 'data/test_data.csv'
+Traceback (most recent call last):
+  File "C:\Users\yty31\project_practice\first-project\data_cleaner.py", line 132, in main
+    df = read_data(args.input)
+  File "C:\Users\yty31\project_practice\first-project\data_cleaner.py", line 38, in read_data
+    return pd.read_csv(file_path)
+  File "C:\Users\yty31\project_practice\first-project\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\yty31\project_practice\first-project\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\yty31\project_practice\first-project\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\yty31\project_practice\first-project\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\yty31\project_practice\first-project\venv\lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/test_data.csv'
+2026-02-25 10:53:34,253 - INFO - === 数据清洗开始 === 输入: data/train_data.csv, 输出: output/cleaned_data.csv
+2026-02-25 10:53:34,254 - ERROR - 读取文件失败: [Errno 2] No such file or directory: 'data/train_data.csv'
+2026-02-25 10:53:34,255 - ERROR - 处理过程中发生未预期错误: [Errno 2] No such file or directory: 'data/train_data.csv'
+Traceback (most recent call last):
+  File "C:\Users\yty31\project_practice\first-project\data_cleaner.py", line 132, in main
+    df = read_data(args.input)
+  File "C:\Users\yty31\project_practice\first-project\data_cleaner.py", line 38, in read_data
+    return pd.read_csv(file_path)
+  File "C:\Users\yty31\project_practice\first-project\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\yty31\project_practice\first-project\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\yty31\project_practice\first-project\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\Users\yty31\project_practice\first-project\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "C:\Users\yty31\project_practice\first-project\venv\lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/train_data.csv'
+2026-02-25 10:57:05,555 - INFO - === 数据清洗开始 === 输入: data/train.csv, 输出: output/cleaned_data_train.csv
+2026-02-25 10:57:05,572 - INFO - 原始数据形状: 891 行, 12 列
+2026-02-25 10:57:05,572 - INFO - 处理缺失值...
+2026-02-25 10:57:05,575 - INFO -   列 'Age': 用中位数 28.00 填充 0 个缺失值
+2026-02-25 10:57:05,578 - INFO -   列 'Cabin': 用众数 'B96 B98' 填充 0 个缺失值
+2026-02-25 10:57:05,579 - INFO -   列 'Embarked': 用众数 'S' 填充 0 个缺失值
+2026-02-25 10:57:05,579 - INFO - 标准化日期格式...
+2026-02-25 10:57:05,587 - INFO - 清洗后数据已保存至: output/cleaned_data_train.csv
+2026-02-25 10:57:05,588 - INFO - 最终数据形状: 891 行, 12 列
